@@ -1,0 +1,13 @@
+node_modules/
+coverage/
+tmp/
+logs/
+dist/server/
+dist/e1c-test-tools/
+TODO
+yarn-error.log
+
+exp/
+
+.env
+*.bak*
