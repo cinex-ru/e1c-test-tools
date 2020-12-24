@@ -51,6 +51,10 @@
         ],
         "pathToLogsDir": "./logs"
     },
+    "bin": {
+        "start-up-test-env": "dist/e1c-test-tools/test-tools/bin/start-up-test-env.js",
+        "shut-down-test-env": "dist/e1c-test-tools/test-tools/bin/shut-down-test-env.js"
+    },
     "scripts": {
         "prepublishOnly": "yarn build:tools && yarn build:tester",
         "prebuild": "rimraf ./dist/server && rimraf ./dist/e1c-repo-tools",
