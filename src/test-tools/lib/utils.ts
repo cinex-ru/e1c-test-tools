@@ -1,8 +1,8 @@
 import { io } from 'socket.io-client';
-import { CreateTaskRequestDto } from '../server/task-requests/dto/create-task-request.dto';
-import { TaskProcessingResultDto } from '../server/task-requests/dto/task-processing-result.dto';
-import { UpdateTaskRequestDto } from '../server/task-requests/dto/update-task-request.dto';
-import { TaskRequestParameterMap, TaskRequestType } from '../server/task-requests/interfaces/task-request.interface';
+import { CreateTaskRequestDto } from '../../server/task-requests/dto/create-task-request.dto';
+import { TaskProcessingResultDto } from '../../server/task-requests/dto/task-processing-result.dto';
+import { UpdateTaskRequestDto } from '../../server/task-requests/dto/update-task-request.dto';
+import { TaskRequestParameterMap, TaskRequestType } from '../../server/task-requests/interfaces/task-request.interface';
 
 export const sleep = (ms: number) => new Promise((resolve) => {
     setTimeout(resolve, ms);
@@ -63,8 +63,8 @@ export const createManagementTaskRequest: CreateTaskRequest<'Management'> = (par
     performOnServer,
 });
 
-export const createEvaluateExternalTaskRequest: CreateTaskRequest<'EvaluateExternal'> = (parameters, performOnServer = false) => ({
-    'type': 'EvaluateExternal',
+export const createExecuteExternalTaskRequest: CreateTaskRequest<'ExecuteExternal'> = (parameters, performOnServer = false) => ({
+    'type': 'ExecuteExternal',
     parameters,
     performOnServer,
 });

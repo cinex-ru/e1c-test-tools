@@ -28,7 +28,7 @@ export type TaskRequestParameterMap ={
     'Execute': ParametersExecute
     'Evaluate': ParametersEvaluate
     'Management': ParametersManagement
-    'EvaluateExternal': ParametersEvaluateExternal
+    'ExecuteExternal': ParametersExecuteExternal
 }
 
 export type TaskRequestType = keyof TaskRequestParameterMap
@@ -45,7 +45,7 @@ export interface ParametersEvaluate {
     expression: string
 }
 
-interface ParametersEvaluateExternal {
+interface ParametersExecuteExternal {
     externalBinName: string
     formName?: string
     method: string

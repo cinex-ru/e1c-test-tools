@@ -1,4 +1,4 @@
-import { createEvaluateTaskRequest, createExecuteTaskRequest, performTask } from '../src/test-tools/utils';
+import { createEvaluateTaskRequest, createExecuteTaskRequest, performTask } from '../src/test-tools/lib/utils';
 
 describe('Когда производится вычисление', () => {
     it('должно корректно вычислять выражение', async () => {
