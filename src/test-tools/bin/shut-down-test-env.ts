@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { config } from 'dotenv';
 import { sleep } from '../lib/utils';
 import { shutdownE1c } from '../lib/test-env';
