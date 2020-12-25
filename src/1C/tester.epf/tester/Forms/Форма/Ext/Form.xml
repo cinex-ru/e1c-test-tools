@@ -15,7 +15,7 @@
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>
-				<v8:Type>cfg:ExternalDataProcessorObject.Tester</v8:Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.TesterSpecialLongNameForSelfTesting_afd1dd579eec439eb41e09c4b84f3222</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 		</Attribute>

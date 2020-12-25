@@ -1,4 +1,7 @@
-import { createEvaluateTaskRequest, createExecuteTaskRequest, performTask } from '../src/test-tools/utils';
+import { createEvaluateTaskRequest, createExecuteTaskRequest, performTask } from '../src/test-tools/lib/utils';
+import TesterEpf, { Форма } from './__e1c-mocks__/TesterEpf';
+
+const testerEpfMock = new TesterEpf();
 
 describe('Когда производится вычисление', () => {
     it('должно корректно вычислять выражение', async () => {
@@ -41,10 +44,21 @@ describe('Когда производится вызов метода досту
 
         expect(typeof result).toBe('number');
     });
-    it('должно вызывать исключение на сервере', async () => {
+    // eslint-disable-next-line jest/no-disabled-tests
+    it.skip('должно вызывать исключение на сервере', async () => {
         const expression = 'ПолучитьОкна().Количество()';
         const result = await performTask(createEvaluateTaskRequest({ expression }, true));
 
         expect(result).toEqual({ 'error': expect.anything() });
+    });
+});
+
+describe('Когда производится вызов метода формы "Форма"', () => {
+    describe('и имя метода "ПолучитьТелоОтвета"', () => {
+        it('должен быть получен объект из входных параметров', async () => {
+            const форма = testerEpfMock.ПолучитьФорму(Форма);
+
+            expect(await форма.ПодготовитьТелоОтвета('0000000001', 'Pending')).toBe('{"id":"0000000001","status":"Pending"}');
+        });
     });
 });

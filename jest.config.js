@@ -8,6 +8,6 @@ module.exports = {
         '\./dist/',
     ],
     'cacheDirectory': './tmp',
-    'globalSetup': './src/test-tools/jest-global-setup.ts',
-    'globalTeardown': './src/test-tools/jest-global-teardown.ts',
+    'globalSetup': './src/test-tools/helpers/jest-global-setup.ts',
+    'globalTeardown': './src/test-tools/helpers/jest-global-teardown.ts',
 };

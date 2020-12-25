@@ -2,7 +2,7 @@
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "outDir": "../../dist/e1c-test-tools",
-        "declaration": false,
+        // "declaration": false,
         "incremental": false
     }
 }
