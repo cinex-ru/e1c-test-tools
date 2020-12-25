@@ -48,8 +48,8 @@ export interface ParametersEvaluate {
 interface ParametersExecuteExternal {
     externalBinName: string
     formName?: string
-    method: string
+    methodName: string
     params: any[]
-    pathToExtBin: string
+    pathToExternalBinFile: string
     exportMethodName: string
 }

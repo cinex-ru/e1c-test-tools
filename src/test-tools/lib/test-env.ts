@@ -59,6 +59,8 @@ export const bootstrapBroker = async (brokerHost: string, brokerPort: string): P
 };
 
 export const bootstrapE1c = async (brokerHost: string, brokerPort: string) => {
+    const pathToTester = process.env.PATH_TO_TESTER_EXTERNAL_BIN_FILE || pathResolve(__dirname, '../../../1C/tester.epf');
+
     const args: string[] = [
         'ENTERPRISE',
         `/${process.env.E1C_DB_TYPE}`,
@@ -68,7 +70,7 @@ export const bootstrapE1c = async (brokerHost: string, brokerPort: string) => {
         '/P',
         process.env.E1C_PASS!,
         '/Execute',
-        pathResolve(process.env.PATH_TO_EXTERNAL_BIN_FILE!),
+        pathResolve(pathToTester),
         '/C',
         `${brokerHost}:${brokerPort}`,
         '/DisableStartupDialogs',

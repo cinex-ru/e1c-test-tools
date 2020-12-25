@@ -1,4 +1,5 @@
 import { config } from 'dotenv';
+import { generateMockedExternalBinFile } from '../lib/mock-utils/mock-generation';
 import { checkEnvIsActive, bootstrapBroker, bootstrapE1c } from '../lib/test-env';
 
 config();
@@ -17,6 +18,9 @@ const setupTestEnv = async () => {
 
         // eslint-disable-next-line no-underscore-dangle
         (global as unknown as { __BROKER__: any }).__BROKER__ = app;
+    }
+    if (process.env.PATH_TO_EXTERNAL_BIN_FILE) {
+        await generateMockedExternalBinFile(process.env.PATH_TO_EXTERNAL_BIN_FILE);
     }
 };
 
