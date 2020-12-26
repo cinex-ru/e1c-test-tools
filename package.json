@@ -92,5 +92,17 @@
         "rxjs": "^6.6.3",
         "socket.io": "^3.0.4",
         "socket.io-client": "^3.0.4"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cinex-ru/e1c-test-tools.git"
+    },
+    "keywords": [
+        "1C",
+        "jest",
+        "test-tools",
+        "testing",
+        "unittest",
+        "e1c"
+    ]
 }

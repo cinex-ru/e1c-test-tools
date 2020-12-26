@@ -98,3 +98,17 @@ export const shutdownE1c = async (brokerHost: string, brokerPort: string) => {
         socket.disconnect();
     });
 };
+
+export const stopPolling = async (brokerHost: string, brokerPort: string) => {
+    const socket = io(`http://${brokerHost}:${brokerPort}`, { 'transports': ['websocket', 'polling'] });
+    socket.on('connect', () => {
+        socket.emit('task-requests', {
+            'type': 'Management',
+            'parameters': {
+                'command': 'StopPolling',
+            },
+        });
+
+        socket.disconnect();
+    });
+};
