@@ -20,3 +20,6 @@ nest-cli.json
 
 .env
 *.bak*
+
+tests/__e1c-mocks__/*.epf
+tests/__e1c-mocks__/*.erf
