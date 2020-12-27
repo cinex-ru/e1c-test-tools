@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/cinex-ru/e1c-test-tools/compare/v0.1.1...v0.1.2) (2020-12-27)
+
+
+### Features
+
+* **tester:** add ValueTable to serialization ([f94fe12](https://github.com/cinex-ru/e1c-test-tools/commit/f94fe1255d182ed163622a84f6eee689d5a8023b))
+
+
+### Styling
+
+* fix problem with eol and tabs ([7bea224](https://github.com/cinex-ru/e1c-test-tools/commit/7bea22467f8a751990a4c5bdaf1cc2aa2ed971b7))
+
+
+### Others
+
+* fix .npmignore ([aa09cc9](https://github.com/cinex-ru/e1c-test-tools/commit/aa09cc93e2a75b2706970da2d4b8bdc3af56d3c7))
+
 ### [0.1.1](https://github.com/cinex-ru/e1c-test-tools/compare/v0.1.0...v0.1.1) (2020-12-26)
 
 
